@@ -1,4 +1,4 @@
-package com.heyueyuan.stack;
+package com.heyueyuan.DataStructure.stack;
 
 import java.util.Scanner;
 

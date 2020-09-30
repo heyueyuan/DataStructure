@@ -1,4 +1,4 @@
-package com.heyueyuan.recursion;
+package com.heyueyuan.DataStructure.recursion;
 
 public class Queen8 {
     int max = 8;

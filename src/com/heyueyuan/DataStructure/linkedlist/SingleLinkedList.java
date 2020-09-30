@@ -1,4 +1,4 @@
-package com.heyueyuan.linkedlist;
+package com.heyueyuan.DataStructure.linkedlist;
 
 public class SingleLinkedList {
     public static void main(String[] args) {

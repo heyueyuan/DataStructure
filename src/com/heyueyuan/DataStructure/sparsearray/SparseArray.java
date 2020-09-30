@@ -1,4 +1,4 @@
-package com.heyueyuan.sparsearray;
+package com.heyueyuan.DataStructure.sparsearray;
 
 public class SparseArray {
     public static void main(String[] args) {

@@ -1,10 +1,10 @@
-package com.heyueyuan.queue;
+package com.heyueyuan.DataStructure.queue;
 
 import java.util.Scanner;
 
-public class ArrayQueue {
+public class CircleArrayQueue {
     public static void main(String[] args) {
-        Queue queue = new Queue(3);
+        CircleArray queue = new CircleArray(3);
         char key = ' ';
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
@@ -44,21 +44,21 @@ public class ArrayQueue {
     }
 }
 
-class Queue {
+class CircleArray {
     private int maxSize;
     private int front;
     private int rear;
     private int[] arr;
 
-    public Queue(int arrMaxSize) {
+    public CircleArray(int arrMaxSize) {
         maxSize = arrMaxSize;
         arr = new int[maxSize];
-        front = -1;
-        rear = -1;
+        front = 0;
+        rear = 0;
     }
 
     public boolean isFull() {
-        return rear == maxSize - 1;
+        return (rear+1) % maxSize == front;
     }
 
     public boolean isEmpty() {
@@ -70,24 +70,29 @@ class Queue {
             System.out.println("Full");
             return;
         }
-        rear++;
         arr[rear] = n;
+        rear = (rear + 1) % maxSize;
     }
 
     public int getQueue(){
         if(isEmpty()){
             throw new RuntimeException("Empty");
         }
-        front++;
-        return arr[front];
+        int value = arr[front];
+        front = (front + 1) % maxSize;
+        return value;
     }
 
     public void showQueue(){
         if(isEmpty()){
             System.out.println("Empty");
         }
-        for (int i = 0; i< arr.length; i++) {
-            System.out.printf("arr[%d]=%d\n", i, arr[i]);
+        for (int i = front; i< front + size(); i++) {
+            System.out.printf("arr[%d]=%d\n", i % maxSize, arr[i % maxSize]);
         }
+    }
+
+    public int size() {
+        return (rear + maxSize - front) % maxSize;
     }
 }
