@@ -1,4 +1,4 @@
-package com.heyueyuan.Algorithm.tree;
+package com.heyueyuan.DataStructure.tree;
 
 public class BinaryTreeDemo {
     public static void main(String[] args) {
