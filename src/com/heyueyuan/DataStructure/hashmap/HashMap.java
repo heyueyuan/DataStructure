@@ -1,4 +1,4 @@
-package com.heyueyuan.Algorithm.hashmap;
+package com.heyueyuan.DataStructure.hashmap;
 
 import java.util.Scanner;
 

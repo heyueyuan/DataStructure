@@ -1,4 +1,4 @@
-package com.heyueyuan.Algorithm.hashmap;
+package com.heyueyuan.DataStructure.hashmap;
 
 public class HashTab {
     private EmpLinkedList[] empLinkedListsArray;

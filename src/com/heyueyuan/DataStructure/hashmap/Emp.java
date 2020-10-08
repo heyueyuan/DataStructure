@@ -1,4 +1,4 @@
-package com.heyueyuan.Algorithm.hashmap;
+package com.heyueyuan.DataStructure.hashmap;
 
 public class Emp {
     public int id;
